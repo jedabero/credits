@@ -1,20 +1,27 @@
-import { parse } from 'date-fns'
-import './App.css'
-import { Movement } from './models/Movement'
-
+import { parse } from 'date-fns';
+import './App.css';
+import Movement from './models/Movement';
+import { CreditCard } from './models/CreditCard';
 
 function App() {
-  const m: Movement = {
-    authNumber: '000000',
-    date: parse('12/12/2022', 'dd/MM/yyyy', new Date()),
-    description: 'AMPLIACION DE PLAZO',
-    value: 32_863_267.45,
-    monthlyRate: 2.9237,
-    yearlyRate: 41.3138,
-    quotas: 48
+  const card: CreditCard = {
+    quota: 24_633,
+    balance: 0,
+    cutoffDay: 15,
   };
-  
-  
+  const m = new Movement(
+    '000000',
+    parse('12/12/2022', 'dd/MM/yyyy', new Date()),
+    'AMPLIACION DE PLAZO',
+    32_863_267.45,
+    2.9237,
+    41.3138,
+    48,
+    card,
+  );
+
+  console.log(m.history);
+
   return (
     <div className="App">
       <main>
@@ -25,7 +32,7 @@ function App() {
       </main>
 
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

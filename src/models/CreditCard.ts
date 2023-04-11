@@ -1,4 +1,4 @@
-import { Credit } from "./Credit";
+import { Credit } from './Credit';
 
 export type CreditCard = Credit & {
 };
