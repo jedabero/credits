@@ -20,7 +20,6 @@ function App() {
     card,
   );
 
-  // eslint-disable-next-line no-console
   console.log(m.history);
 
   return (

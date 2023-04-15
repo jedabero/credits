@@ -60,7 +60,6 @@ export default class Movement {
     }
     this.history = months.map<History>((month, index) => {
       const prevDate = index === 0 ? this.date : months[index - 1];
-      // eslint-disable-next-line no-console
       console.log({ pd: prevDate.toISOString(), cd: month.toISOString() });
       return {
         date: month,
