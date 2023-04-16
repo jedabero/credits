@@ -4,4 +4,6 @@ export type History = {
   debits: number,
   credits: number,
   balance: number, // remaining
+  interest: number,
+  total: number,
 };
