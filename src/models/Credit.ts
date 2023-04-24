@@ -1,5 +1,7 @@
+import { EntityId } from '@reduxjs/toolkit';
+
 export type Credit = {
-  id: number,
+  id: EntityId,
   name: string,
   quota: number,
   balance: number,
