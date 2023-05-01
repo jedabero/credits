@@ -1,0 +1,9 @@
+.movementrow {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr) 2fr;
+}
+
+.movementrow > input {
+  display: block;
+  min-width: 0;
+}

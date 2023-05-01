@@ -8,6 +8,7 @@ import {
   differenceInDays,
   eachMonthOfInterval,
   addMonths,
+  parse,
 } from 'date-fns';
 import { CreditCard } from './CreditCard';
 import { Movement } from './Movement';
@@ -21,7 +22,7 @@ export function generateHistory(
   debits: number,
   movement: Movement,
 ): History {
-  const prevDate = index === 0 ? movement.date : months[index - 1];
+  const prevDate = index === 0 ? parse(movement.date, 'yyyy-MM-dd', new Date()) : months[index - 1];
   const firstMonthDays = getDaysInMonth(prevDate);
   const firstPartDays = differenceInDays(endOfMonth(prevDate), prevDate);
   const firstDailyRate = ((1 + (movement.monthlyRate / 100)) ** (1 / firstMonthDays) - 1);
@@ -53,9 +54,9 @@ export function generateFullHistory(movement: Movement, card: CreditCard) {
   if (isAfter(lastCutoffDate, new Date())) {
     lastCutoffDate = subMonths(lastCutoffDate, 1);
   }
-  let start = movement.date;
+  let start = parse(movement.date, 'yyyy-MM-dd', new Date());
   if (isAfter(start, setDate(start, card.cutoffDay))) {
-    start = addMonths(movement.date, 1);
+    start = addMonths(parse(movement.date, 'yyyy-MM-dd', new Date()), 1);
   }
   const months = eachMonthOfInterval({ start, end: lastCutoffDate });
   for (let index = months.length - 1; index >= 0; index -= 1) {

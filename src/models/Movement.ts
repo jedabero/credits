@@ -1,9 +1,14 @@
+import { EntityId } from '@reduxjs/toolkit';
 import { History } from './History';
 
 export type Movement = {
+  id: EntityId,
+
+  cardId: EntityId,
+
   authNumber: string;
 
-  date: Date;
+  date: string;
 
   description: string;
 

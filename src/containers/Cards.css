@@ -1,4 +1,9 @@
 .cardrow {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(6, 1fr) 2fr;
+}
+
+.cardrow > input {
+  display: block;
+  min-width: 0;
 }

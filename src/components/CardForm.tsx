@@ -5,16 +5,19 @@ import { EntityId } from '@reduxjs/toolkit';
 import { selectCreditCardById, addCard, updateCard } from '../reducers/creditCards';
 import { useAppSelector, useAppDispatch } from '../hooks';
 import { CreditCard } from '../models/CreditCard';
-import './CardForm.css';
 
 type CardFormProps = {
   cardId?: EntityId,
-  onSave: () => void,
+  clearCardId: () => void,
 };
 
-function CardForm({ cardId, onSave }: CardFormProps) {
+function CardForm({ cardId, clearCardId }: CardFormProps) {
   const dispatch = useAppDispatch();
-  const id = useMemo(() => cardId || crypto.randomUUID(), [cardId]);
+  const [wasSaved, setWasSaved] = useState(false);
+  const id = useMemo(() => {
+    if (wasSaved) setWasSaved(false);
+    return cardId || crypto.randomUUID();
+  }, [cardId, wasSaved]);
   const card = useAppSelector((state) => selectCreditCardById(state, id));
   const [values, setValues] = useState<CreditCard>({
     id,
@@ -47,11 +50,15 @@ function CardForm({ cardId, onSave }: CardFormProps) {
     [values, setValues],
   );
   const save = useCallback(() => {
-    if (card?.id) {
-      dispatch(updateCard({ id: card.id, changes: values }));
+    if (cardId) {
+      dispatch(updateCard({ id: cardId, changes: values }));
+      clearCardId();
     } else {
       dispatch(addCard(values));
     }
+    setWasSaved(true);
+  }, [cardId, dispatch, clearCardId, values]);
+  const cancel = useCallback(() => {
     setValues({
       id,
       name: '',
@@ -60,8 +67,8 @@ function CardForm({ cardId, onSave }: CardFormProps) {
       balance: 0,
       cutoffDay: 1,
     });
-    onSave();
-  }, [id, card?.id, dispatch, onSave, values]);
+    clearCardId();
+  }, [id, clearCardId]);
   return (
     <div className="cardrow">
       <div>{(`${values.id}`).substring(0, 13)}</div>
@@ -70,7 +77,10 @@ function CardForm({ cardId, onSave }: CardFormProps) {
       <input name="quota" type="number" value={values.quota} onChange={setValue} />
       <input name="balance" type="number" value={values.balance} onChange={setValue} />
       <input name="cutoffDay" type="number" value={values.cutoffDay} onChange={setValue} min={1} max={31} />
-      <button type="button" onClick={save}>{card?.id ? 'Update' : 'Create'}</button>
+      <div>
+        <button type="button" onClick={save}>{card?.id ? 'Update' : 'Create'}</button>
+        {card?.id ? <button type="button" onClick={cancel}>Cancel</button> : null}
+      </div>
     </div>
   );
 }

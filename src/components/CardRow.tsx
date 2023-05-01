@@ -6,12 +6,15 @@ import { useAppSelector, useAppDispatch } from '../hooks';
 
 type CardRowProps = {
   cardId: EntityId,
-  onEdit: () => void,
+  onEdit: React.Dispatch<React.SetStateAction<EntityId | undefined>>,
+  onView: React.Dispatch<React.SetStateAction<EntityId | undefined>>,
 };
 
-function CardRow({ cardId, onEdit }: CardRowProps) {
+function CardRow({ cardId, onEdit, onView }: CardRowProps) {
   const dispatch = useAppDispatch();
   const handleDelete = useCallback(() => dispatch(removeCard(cardId)), [cardId, dispatch]);
+  const handleEdit = useCallback(() => onEdit(cardId), [cardId, onEdit]);
+  const handleView = useCallback(() => onView(cardId), [cardId, onView]);
   const card = useAppSelector((state) => selectCreditCardById(state, cardId));
   if (!card) return null;
   return (
@@ -22,9 +25,9 @@ function CardRow({ cardId, onEdit }: CardRowProps) {
       <div>{card.quota.toLocaleString('en-419', { style: 'currency', currency: 'USD' })}</div>
       <div>{card.balance.toLocaleString('en-419', { style: 'currency', currency: 'USD' })}</div>
       <div>{card.cutoffDay}</div>
-      <div>{card.lastPaymentDate?.toISOString()}</div>
       <div>
-        <button type="button" onClick={onEdit}>Edit</button>
+        <button type="button" onClick={handleView}>View</button>
+        <button type="button" onClick={handleEdit}>Edit</button>
         <button type="button" onClick={handleDelete}>Delete</button>
       </div>
     </div>
