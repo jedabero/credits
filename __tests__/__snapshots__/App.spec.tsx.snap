@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App test render App 1`] = `
+<div
+  className="App"
+>
+  <main>
+    <h6>
+      Tasks
+    </h6>
+    <p>
+      Definir Credito
+    </p>
+    <p>
+      Definir Movimiento
+    </p>
+    <p>
+      Ver valores detallados del mes y de cada movimiento
+    </p>
+  </main>
+  <Cards
+    onViewCardMovements={[Function]}
+  />
+</div>
+`;
+
+exports[`App test should display movements 1`] = `
+<div
+  className="App"
+>
+  <main>
+    <h6>
+      Tasks
+    </h6>
+    <p>
+      Definir Credito
+    </p>
+    <p>
+      Definir Movimiento
+    </p>
+    <p>
+      Ver valores detallados del mes y de cada movimiento
+    </p>
+  </main>
+  <Cards
+    onViewCardMovements={[Function]}
+  />
+  <Movements
+    cardId="SOME ID"
+    onViewMovementHistory={[Function]}
+  />
+</div>
+`;
