@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardForm test should render 1`] = `
+<div
+  className="cardrow"
+>
+  <div>
+    SOME ID
+  </div>
+  <input
+    name="name"
+    onChange={[Function]}
+    value=""
+  />
+  <input
+    name="cardNumber"
+    onChange={[Function]}
+    value=""
+  />
+  <input
+    name="quota"
+    onChange={[Function]}
+    type="number"
+    value={0}
+  />
+  <input
+    name="balance"
+    onChange={[Function]}
+    type="number"
+    value={0}
+  />
+  <input
+    max={31}
+    min={1}
+    name="cutoffDay"
+    onChange={[Function]}
+    type="number"
+    value={1}
+  />
+  <div>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Create
+    </button>
+  </div>
+</div>
+`;

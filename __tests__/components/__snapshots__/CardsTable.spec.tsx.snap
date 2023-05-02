@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardsTable test should render 1`] = `
+<div
+  className="cardstable"
+>
+  <div
+    className="cardrow"
+  >
+    <div>
+      ID
+    </div>
+    <div>
+      Name
+    </div>
+    <div>
+      Number
+    </div>
+    <div>
+      Quota
+    </div>
+    <div>
+      Balance
+    </div>
+    <div>
+      Cut off day
+    </div>
+    <div>
+      Actions
+    </div>
+  </div>
+</div>
+`;

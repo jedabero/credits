@@ -13,6 +13,7 @@ exports[`Movements test call clearMovementId 1`] = `
     movementId={null}
   />
   <MovementsTable
+    cardId="CARD ID"
     onEdit={[Function]}
     onView={[Function]}
   />
@@ -32,6 +33,7 @@ exports[`Movements test render Movements 1`] = `
     movementId={null}
   />
   <MovementsTable
+    cardId="CARD ID"
     onEdit={[Function]}
     onView={[Function]}
   />
@@ -51,6 +53,7 @@ exports[`Movements test set movementId 1`] = `
     movementId="SOME ID"
   />
   <MovementsTable
+    cardId="CARD ID"
     onEdit={[Function]}
     onView={[Function]}
   />

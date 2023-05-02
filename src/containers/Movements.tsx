@@ -2,9 +2,9 @@ import { useCallback, useState } from 'react';
 import { EntityId } from '@reduxjs/toolkit';
 
 import MovementForm from '../components/MovementForm';
+import MovementsTable from '../components/MovementsTable';
 
 import './Movements.css';
-import MovementsTable from '../components/MovementsTable';
 
 type MovementProps = {
   cardId: EntityId
@@ -22,7 +22,7 @@ function Movements({ cardId, onViewMovementHistory }: MovementProps) {
         movementId={movementIdBeingEdited}
         clearMovementId={clearMovementId}
       />
-      <MovementsTable onEdit={setMovementId} onView={onViewMovementHistory} />
+      <MovementsTable cardId={cardId} onEdit={setMovementId} onView={onViewMovementHistory} />
     </div>
   );
 }

@@ -7,4 +7,9 @@ import eslint from 'vite-plugin-eslint';
 export default defineConfig({
   base: '/credits/',
   plugins: [react(), eslint()],
+  server: {
+    watch: {
+      ignored: ['**/coverage/**'],
+    },
+  },
 });

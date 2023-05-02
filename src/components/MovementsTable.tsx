@@ -1,15 +1,16 @@
 import { EntityId } from '@reduxjs/toolkit';
-import { selectMovementsIds } from '../reducers/movements';
+import { selectMovementsIdsByCardId } from '../reducers/movements';
 import { useAppSelector } from '../hooks';
 import MovementRow from './MovementRow';
 
 type MovementsTableProps = {
+  cardId: EntityId,
   onEdit: React.Dispatch<React.SetStateAction<EntityId | undefined>>,
   onView: React.Dispatch<React.SetStateAction<EntityId | undefined>>,
 };
 
-function MovementsTable({ onEdit, onView }: MovementsTableProps) {
-  const movementsIds = useAppSelector(selectMovementsIds);
+function MovementsTable({ cardId, onEdit, onView }: MovementsTableProps) {
+  const movementsIds = useAppSelector(selectMovementsIdsByCardId(cardId));
 
   return (
     <div className="movementstable">

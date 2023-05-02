@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovementsTable test should render 1`] = `
+<div
+  className="movementstable"
+>
+  <div
+    className="movementrow"
+  >
+    <div>
+      ID
+    </div>
+    <div>
+      Auth Number
+    </div>
+    <div>
+      Date
+    </div>
+    <div>
+      Description
+    </div>
+    <div>
+      Value
+    </div>
+    <div>
+      Monthly Rate
+    </div>
+    <div>
+      Yearly Rate
+    </div>
+    <div>
+      Quotas
+    </div>
+    <div>
+      Actions
+    </div>
+  </div>
+</div>
+`;
