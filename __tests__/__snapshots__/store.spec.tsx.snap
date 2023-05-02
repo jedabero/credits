@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`store test render App 1`] = `
+{
+  "creditCards": {
+    "entities": {},
+    "ids": [],
+  },
+  "movements": {
+    "entities": {},
+    "ids": [],
+  },
+}
+`;

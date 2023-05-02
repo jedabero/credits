@@ -8,6 +8,7 @@ const jestConfig: JestConfigWithTsJest = {
   },
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{ts,tsx}'],
+  coveragePathIgnorePatterns: ['src/main.tsx', 'src/vite-env.d.ts'],
   coverageDirectory: 'coverage',
   coverageProvider: 'v8',
 }
