@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movements test call clearMovementId 1`] = `
+<div
+  className="movements"
+>
+  <h4>
+    Movements
+  </h4>
+  <MovementForm
+    cardId="CARD ID"
+    clearMovementId={[Function]}
+    movementId={null}
+  />
+  <MovementsTable
+    onEdit={[Function]}
+    onView={[Function]}
+  />
+</div>
+`;
+
+exports[`Movements test render Movements 1`] = `
+<div
+  className="movements"
+>
+  <h4>
+    Movements
+  </h4>
+  <MovementForm
+    cardId="CARD ID"
+    clearMovementId={[Function]}
+    movementId={null}
+  />
+  <MovementsTable
+    onEdit={[Function]}
+    onView={[Function]}
+  />
+</div>
+`;
+
+exports[`Movements test set movementId 1`] = `
+<div
+  className="movements"
+>
+  <h4>
+    Movements
+  </h4>
+  <MovementForm
+    cardId="CARD ID"
+    clearMovementId={[Function]}
+    movementId="SOME ID"
+  />
+  <MovementsTable
+    onEdit={[Function]}
+    onView={[Function]}
+  />
+</div>
+`;

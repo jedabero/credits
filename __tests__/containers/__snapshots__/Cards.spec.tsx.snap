@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cards test call clearCardId 1`] = `
+<div
+  className="cards"
+>
+  <h3>
+    Cards
+  </h3>
+  <CardForm
+    cardId={null}
+    clearCardId={[Function]}
+  />
+  <CardsTable
+    onEdit={[Function]}
+    onView={[Function]}
+  />
+</div>
+`;
+
+exports[`Cards test render Cards 1`] = `
+<div
+  className="cards"
+>
+  <h3>
+    Cards
+  </h3>
+  <CardForm
+    cardId={null}
+    clearCardId={[Function]}
+  />
+  <CardsTable
+    onEdit={[Function]}
+    onView={[Function]}
+  />
+</div>
+`;
+
+exports[`Cards test set cardId 1`] = `
+<div
+  className="cards"
+>
+  <h3>
+    Cards
+  </h3>
+  <CardForm
+    cardId="SOME ID"
+    clearCardId={[Function]}
+  />
+  <CardsTable
+    onEdit={[Function]}
+    onView={[Function]}
+  />
+</div>
+`;
