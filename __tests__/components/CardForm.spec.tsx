@@ -27,6 +27,12 @@ describe('CardForm test', () => {
     );
     expect(tree.toJSON()).toMatchSnapshot();
   });
+  test('save called', () => {
+    act(() => {
+      tree.root.findAllByType('button')[0].props.onClick();
+    });
+    expect(tree.toJSON()).toMatchSnapshot();
+  });
   test('should render with card', () => {
     const store = mockStore({
       _persist: { version: 0, rehydrated: true },
