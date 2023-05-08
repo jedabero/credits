@@ -18,7 +18,7 @@ function MovementForm({ movementId, cardId, clearMovementId }: MovementFormProps
   const [wasSaved, setWasSaved] = useState(false);
   const id = useMemo(() => {
     if (wasSaved) setWasSaved(false);
-    return movementId || crypto.randomUUID();
+    return movementId ?? crypto.randomUUID();
   }, [wasSaved, movementId]);
   const movement = useAppSelector((state) => selectMovementById(state, id));
   const [values, setValues] = useState<Movement>({

@@ -31,3 +31,77 @@ exports[`CardsTable test should render 1`] = `
   </div>
 </div>
 `;
+
+exports[`CardsTable test should rows 1`] = `
+<div
+  className="cardstable"
+>
+  <div
+    className="cardrow"
+  >
+    <div>
+      ID
+    </div>
+    <div>
+      Name
+    </div>
+    <div>
+      Number
+    </div>
+    <div>
+      Quota
+    </div>
+    <div>
+      Balance
+    </div>
+    <div>
+      Cut off day
+    </div>
+    <div>
+      Actions
+    </div>
+  </div>
+  <div
+    className="cardrow"
+  >
+    <div>
+      SOME ID
+    </div>
+    <div>
+      name
+    </div>
+    <div>
+      cardNumber
+    </div>
+    <div>
+      $1.00
+    </div>
+    <div>
+      $1.00
+    </div>
+    <div>
+      1
+    </div>
+    <div>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        View
+      </button>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Edit
+      </button>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
+`;

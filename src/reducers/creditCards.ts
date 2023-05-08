@@ -3,7 +3,6 @@ import { CreditCard } from '../models/CreditCard';
 import type { RootState } from '../store';
 
 export const cardsAdapter = createEntityAdapter<CreditCard>({
-  selectId: ({ id }) => id,
   sortComparer: (a, b) => a.name.localeCompare(b.name),
 });
 const initialState = cardsAdapter.getInitialState();

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movements reducer Select Movements By Card Id Empty 1`] = `[]`;
+
+exports[`Movements reducer Select Movements By Card Id Found 1`] = `
+[
+  {
+    "authNumber": "0",
+    "cardId": "SOME ID",
+    "date": "",
+    "description": "",
+    "id": "SOME OTHER ID",
+    "monthlyRate": 0.01,
+    "quotas": 1,
+    "value": 1,
+    "yearlyRate": 0.01,
+  },
+]
+`;

@@ -26,4 +26,33 @@ describe('CardsTable test', () => {
     );
     expect(tree.toJSON()).toMatchSnapshot();
   });
+  test('should rows', () => {
+    const store = mockStore({
+      _persist: { version: 0, rehydrated: true },
+      creditCards: {
+        entities: {
+          'SOME ID': {
+            id: 'SOME ID',
+            name: 'name',
+            quota: 1,
+            balance: 1,
+            cutoffDay: 1,
+            cardNumber: 'cardNumber',
+          },
+        },
+        ids: ['SOME ID'],
+      },
+      movements: {
+        entities: {},
+        ids: [],
+      },
+    });
+    const tree = create(
+      wrapProvider(
+        <CardsTable onEdit={() => {}} onView={() => {}} />,
+        store,
+      ),
+    );
+    expect(tree.toJSON()).toMatchSnapshot();
+  });
 });

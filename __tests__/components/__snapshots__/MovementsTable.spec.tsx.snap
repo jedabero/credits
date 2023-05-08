@@ -37,3 +37,85 @@ exports[`MovementsTable test should render 1`] = `
   </div>
 </div>
 `;
+
+exports[`MovementsTable test should rows 1`] = `
+<div
+  className="movementstable"
+>
+  <div
+    className="movementrow"
+  >
+    <div>
+      ID
+    </div>
+    <div>
+      Auth Number
+    </div>
+    <div>
+      Date
+    </div>
+    <div>
+      Description
+    </div>
+    <div>
+      Value
+    </div>
+    <div>
+      Monthly Rate
+    </div>
+    <div>
+      Yearly Rate
+    </div>
+    <div>
+      Quotas
+    </div>
+    <div>
+      Actions
+    </div>
+  </div>
+  <div
+    className="movementrow"
+  >
+    <div>
+      SOME OTHER ID
+    </div>
+    <div>
+      0
+    </div>
+    <div />
+    <div />
+    <div>
+      $1.00
+    </div>
+    <div>
+      0.01
+    </div>
+    <div>
+      0.01
+    </div>
+    <div>
+      1
+    </div>
+    <div>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        View
+      </button>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Edit
+      </button>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MovementForm test should render 1`] = `
+exports[`MovementForm test cancel called 1`] = `
 <div
   className="movementrow"
 >
   <div>
-    SOME ID
+    SOME OTHER ID
   </div>
   <input
     name="authNumber"
@@ -41,6 +41,462 @@ exports[`MovementForm test should render 1`] = `
     onChange={[Function]}
     type="number"
     value={0}
+  />
+  <input
+    min={1}
+    name="quotas"
+    onChange={[Function]}
+    type="number"
+    value={1}
+  />
+  <div>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Update
+    </button>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </div>
+</div>
+`;
+
+exports[`MovementForm test save called 1`] = `
+<div
+  className="movementrow"
+>
+  <div>
+    SOME OTHER ID
+  </div>
+  <input
+    name="authNumber"
+    onChange={[Function]}
+    value="NUMBER"
+  />
+  <input
+    name="date"
+    onChange={[Function]}
+    type="date"
+    value=""
+  />
+  <input
+    name="description"
+    onChange={[Function]}
+    value=""
+  />
+  <input
+    min={1}
+    name="value"
+    onChange={[Function]}
+    type="number"
+    value={1}
+  />
+  <input
+    name="monthlyRate"
+    onChange={[Function]}
+    type="number"
+    value={0.02}
+  />
+  <input
+    name="yearlyRate"
+    onChange={[Function]}
+    type="number"
+    value={0.01}
+  />
+  <input
+    min={1}
+    name="quotas"
+    onChange={[Function]}
+    type="number"
+    value={2}
+  />
+  <div>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Update
+    </button>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </div>
+</div>
+`;
+
+exports[`MovementForm test setValue called 1`] = `
+<div
+  className="movementrow"
+>
+  <div>
+    SOME OTHER ID
+  </div>
+  <input
+    name="authNumber"
+    onChange={[Function]}
+    value="NUMBER"
+  />
+  <input
+    name="date"
+    onChange={[Function]}
+    type="date"
+    value=""
+  />
+  <input
+    name="description"
+    onChange={[Function]}
+    value=""
+  />
+  <input
+    min={1}
+    name="value"
+    onChange={[Function]}
+    type="number"
+    value={1}
+  />
+  <input
+    name="monthlyRate"
+    onChange={[Function]}
+    type="number"
+    value={0.01}
+  />
+  <input
+    name="yearlyRate"
+    onChange={[Function]}
+    type="number"
+    value={0.01}
+  />
+  <input
+    min={1}
+    name="quotas"
+    onChange={[Function]}
+    type="number"
+    value={1}
+  />
+  <div>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Update
+    </button>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </div>
+</div>
+`;
+
+exports[`MovementForm test setValue called for number (float) field 1`] = `
+<div
+  className="movementrow"
+>
+  <div>
+    SOME OTHER ID
+  </div>
+  <input
+    name="authNumber"
+    onChange={[Function]}
+    value="NUMBER"
+  />
+  <input
+    name="date"
+    onChange={[Function]}
+    type="date"
+    value=""
+  />
+  <input
+    name="description"
+    onChange={[Function]}
+    value=""
+  />
+  <input
+    min={1}
+    name="value"
+    onChange={[Function]}
+    type="number"
+    value={1}
+  />
+  <input
+    name="monthlyRate"
+    onChange={[Function]}
+    type="number"
+    value={0.02}
+  />
+  <input
+    name="yearlyRate"
+    onChange={[Function]}
+    type="number"
+    value={0.01}
+  />
+  <input
+    min={1}
+    name="quotas"
+    onChange={[Function]}
+    type="number"
+    value={2}
+  />
+  <div>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Update
+    </button>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </div>
+</div>
+`;
+
+exports[`MovementForm test setValue called for number field 1`] = `
+<div
+  className="movementrow"
+>
+  <div>
+    SOME OTHER ID
+  </div>
+  <input
+    name="authNumber"
+    onChange={[Function]}
+    value="NUMBER"
+  />
+  <input
+    name="date"
+    onChange={[Function]}
+    type="date"
+    value=""
+  />
+  <input
+    name="description"
+    onChange={[Function]}
+    value=""
+  />
+  <input
+    min={1}
+    name="value"
+    onChange={[Function]}
+    type="number"
+    value={1}
+  />
+  <input
+    name="monthlyRate"
+    onChange={[Function]}
+    type="number"
+    value={0.01}
+  />
+  <input
+    name="yearlyRate"
+    onChange={[Function]}
+    type="number"
+    value={0.01}
+  />
+  <input
+    min={1}
+    name="quotas"
+    onChange={[Function]}
+    type="number"
+    value={2}
+  />
+  <div>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Update
+    </button>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </div>
+</div>
+`;
+
+exports[`MovementForm test setValue called for number field with invalid value 1`] = `
+<div
+  className="movementrow"
+>
+  <div>
+    SOME OTHER ID
+  </div>
+  <input
+    name="authNumber"
+    onChange={[Function]}
+    value="NUMBER"
+  />
+  <input
+    name="date"
+    onChange={[Function]}
+    type="date"
+    value=""
+  />
+  <input
+    name="description"
+    onChange={[Function]}
+    value=""
+  />
+  <input
+    min={1}
+    name="value"
+    onChange={[Function]}
+    type="number"
+    value={1}
+  />
+  <input
+    name="monthlyRate"
+    onChange={[Function]}
+    type="number"
+    value={0.01}
+  />
+  <input
+    name="yearlyRate"
+    onChange={[Function]}
+    type="number"
+    value={0.01}
+  />
+  <input
+    min={1}
+    name="quotas"
+    onChange={[Function]}
+    type="number"
+    value={2}
+  />
+  <div>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Update
+    </button>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Cancel
+    </button>
+  </div>
+</div>
+`;
+
+exports[`MovementForm test should render 1`] = `
+<div
+  className="movementrow"
+>
+  <div>
+    A-U-U-ID-S
+  </div>
+  <input
+    name="authNumber"
+    onChange={[Function]}
+    value=""
+  />
+  <input
+    name="date"
+    onChange={[Function]}
+    type="date"
+    value="2023-01-01"
+  />
+  <input
+    name="description"
+    onChange={[Function]}
+    value=""
+  />
+  <input
+    min={1}
+    name="value"
+    onChange={[Function]}
+    type="number"
+    value={1}
+  />
+  <input
+    name="monthlyRate"
+    onChange={[Function]}
+    type="number"
+    value={0}
+  />
+  <input
+    name="yearlyRate"
+    onChange={[Function]}
+    type="number"
+    value={0}
+  />
+  <input
+    min={1}
+    name="quotas"
+    onChange={[Function]}
+    type="number"
+    value={1}
+  />
+  <div>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Create
+    </button>
+  </div>
+</div>
+`;
+
+exports[`MovementForm test should render with movement 1`] = `
+<div
+  className="movementrow"
+>
+  <div>
+    SOME OTHER ID
+  </div>
+  <input
+    name="authNumber"
+    onChange={[Function]}
+    value="0"
+  />
+  <input
+    name="date"
+    onChange={[Function]}
+    type="date"
+    value=""
+  />
+  <input
+    name="description"
+    onChange={[Function]}
+    value=""
+  />
+  <input
+    min={1}
+    name="value"
+    onChange={[Function]}
+    type="number"
+    value={1}
+  />
+  <input
+    name="monthlyRate"
+    onChange={[Function]}
+    type="number"
+    value={0.01}
+  />
+  <input
+    name="yearlyRate"
+    onChange={[Function]}
+    type="number"
+    value={0.01}
   />
   <input
     min={1}

@@ -5,7 +5,6 @@ import { Movement } from '../models/Movement';
 import type { RootState } from '../store';
 
 export const movementsAdapter = createEntityAdapter<Movement>({
-  selectId: ({ id }) => id,
   sortComparer: (a, b) => a.authNumber.localeCompare(b.authNumber),
 });
 const initialState = movementsAdapter.getInitialState();

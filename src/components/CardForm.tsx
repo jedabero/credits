@@ -16,7 +16,7 @@ function CardForm({ cardId, clearCardId }: CardFormProps) {
   const [wasSaved, setWasSaved] = useState(false);
   const id = useMemo(() => {
     if (wasSaved) setWasSaved(false);
-    return cardId || crypto.randomUUID();
+    return cardId ?? crypto.randomUUID();
   }, [cardId, wasSaved]);
   const card = useAppSelector((state) => selectCreditCardById(state, id));
   const [values, setValues] = useState<CreditCard>({
