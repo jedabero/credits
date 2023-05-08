@@ -6,6 +6,10 @@ import wrapProvider from '../../__tests_helpers__/wrapProvider';
 import mockStore from '../../__tests_helpers__/mockStore';
 
 describe('MovementForm test', () => {
+  beforeAll(() => {
+    jest.useFakeTimers();
+    jest.setSystemTime(new Date(2023, 0, 1));
+  });
   test('should render', () => {
     const store = mockStore({
       _persist: { version: 0, rehydrated: true },
@@ -25,5 +29,8 @@ describe('MovementForm test', () => {
       ),
     );
     expect(tree.toJSON()).toMatchSnapshot();
+  });
+  afterAll(() => {
+    jest.useRealTimers();
   });
 });
